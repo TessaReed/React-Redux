@@ -1,15 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+//create a new component. This component should produce some html.
+// put the component HTML and put it on page. In the DOM.
 
-import App from './components/app';
-import reducers from './reducers';
-
-const createStoreWithMiddleware = applyMiddleware()(createStore);
-
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+ //declare a variable to hold Youtube API key
+ const API_KEY = 'AIzaSyC80D-KKhajH2HVkaDYiJqt7_7UwNDdh5c';
