@@ -15,9 +15,17 @@ import React, { Component } from 'react';
 
 // define a new class & give it access to all of functionality that react.Component has.
 class SearchBar extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { term: ''};
+  }
+//term is search term, so whenever the user searches, the term will update.
+// to be the value of the input.
+
+
   render () {
-    return <input onChange={event => console.log(event.target.value)}
-    />;
+    return <input onChange={event => this.setState({term : event.target.value})} />;
   }
 }
   //whenever user interacts you have a change event.
@@ -27,11 +35,10 @@ class SearchBar extends Component {
   //event handler - always called with an event object.
   // event.target.value - get access to input
   // use arrow function to combact code
-  {/* onInputChange(event) {
+  /* onInputChange(event) {
     console.log(event.target.value);
-  } */}
+  } */
 
-}
 
 export default SearchBar;
 //this is so any file that imports searchbar will get searchbarcomponent
