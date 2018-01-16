@@ -17,18 +17,26 @@ import React, { Component } from 'react';
 class SearchBar extends Component {
   constructor(props) {
     super(props);
-
-    this.state = { term: ''};
+    //term is set to empty string
+    this.state = { term: 'Starting Value'};
   }
 //term is search term, so whenever the user searches, the term will update.
 // to be the value of the input.
 
 
   render () {
-    return <input onChange={event => this.setState({term : event.target.value})} />;
+    return (
+    <div>
+        <input
+      value ={this.state.term}
+      onChange={event => this.setState({term : event.target.value})} />
+    </div>
+  );
   }
 }
   //whenever user interacts you have a change event.
+
+  //this.setState allows you to change state
 
 
 
